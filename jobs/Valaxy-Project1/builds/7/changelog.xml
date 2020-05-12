@@ -1,0 +1,9 @@
+commit cd0b7eb4b1a918018a92fc1253d32dff7ced30a3
+tree 5b2f218388b4777f9be86278de9e945faadc8322
+parent c9eb9b5e846339d86f37ca1deb20987f91e206c8
+author Venkatesh <venkateshyadavali@users.noreply.github.com> 2020-05-11 11:15:38 +0530
+committer GitHub <noreply@github.com> 2020-05-11 11:15:38 +0530
+
+    Updated index.jsp with DevOps Image
+
+:100644 100644 8f2822a7c160670912573e262c58ab42342fc152 3e0d0ce32b92b45469ee0ee5fd02f28a6f490b3f M	webapp/src/main/webapp/index.jsp

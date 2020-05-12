@@ -1,0 +1,10 @@
+Started on May 11, 2020 6:28:00 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision 53a83f047cf3387d14a7661841ac6bc44e644800 (refs/remotes/origin/master)
+No credentials specified
+ > git --version # timeout=10
+ > git ls-remote -h -- https://github.com/venkateshyadavali/hello-world.git # timeout=10
+Found 3 remote heads on https://github.com/venkateshyadavali/hello-world.git
+[poll] Latest remote head revision on refs/heads/master is: 89659f2ec63af5216eb2f14b322a618784669c30
+Done. Took 0.15 sec
+Changes found

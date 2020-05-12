@@ -1,0 +1,26 @@
+Started by user [8mha:////4KtGehsvflfNrEG1q4K6Oa1rqLjCppc9Y4Tl6vbkTpCCAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZ+/dLi1CL9stS87MSS1OIMAGpz4oPEAAAA[0mVenkatesh Y
+Running as SYSTEM
+Building remotely on [8mha:////4NpNjSNb1SRnHElsJ71DfUL5gI8jiI0SE/mT3FoUGUg1AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYR/eT83ILSktQifd/EstQ83SAPVx8AqpItv8kAAAA=[0mMaven-RHEL (maven docker) in workspace /home/jenkins/workspace/Maven-Project
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/venkateshyadavali/hello-world.git
+ > git init /home/jenkins/workspace/Maven-Project # timeout=10
+Fetching upstream changes from https://github.com/venkateshyadavali/hello-world.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/venkateshyadavali/hello-world.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/venkateshyadavali/hello-world.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/venkateshyadavali/hello-world.git # timeout=10
+Fetching upstream changes from https://github.com/venkateshyadavali/hello-world.git
+ > git fetch --tags --progress -- https://github.com/venkateshyadavali/hello-world.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 54ac5cf9287e140217dfb1eb9c5e6a8561388957 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 54ac5cf9287e140217dfb1eb9c5e6a8561388957 # timeout=10
+Commit message: "123"
+ > git rev-list --no-walk 54ac5cf9287e140217dfb1eb9c5e6a8561388957 # timeout=10
+ERROR: Maven Home null doesnt exist
+Finished: FAILURE

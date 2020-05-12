@@ -1,0 +1,84 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: #808000; background-color: #ffff99;&quot;&gt;&lt;em&gt;&lt;strong&gt;Jenkins Free-Style project to build Spring-petclinic project using maven on slave node.&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&#xd;
+&lt;p&gt;&lt;span style=&quot;color: #000080; background-color: #ffffff;&quot;&gt;1. Get code from SCM (git).&lt;/span&gt;&lt;/p&gt;&#xd;
+&lt;ul&gt;&#xd;
+&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;color: #000080; background-color: #ffffff;&quot;&gt;Specify the git repository of the code.&lt;/span&gt;&#xd;
+&lt;ul&gt;&#xd;
+&lt;li&gt;&lt;span style=&quot;color: #000080; background-color: #ffffff;&quot;&gt;git clone &amp;lt;repository url&amp;gt;&lt;/span&gt;&lt;/li&gt;&#xd;
+&lt;/ul&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;li&gt;&lt;span style=&quot;color: #000080;&quot;&gt;Specify the branch to be built. Provide the ability to choose branches from git repository. &apos;Project Parametization&apos; from Genral section to be used for this.&lt;/span&gt;&#xd;
+&lt;ul&gt;&#xd;
+&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;color: #000080;&quot;&gt;Install the &lt;span style=&quot;color: #808000;&quot;&gt;&lt;em&gt;&apos;Git Parameter&apos;&lt;/em&gt; &lt;em&gt;plugin&lt;/em&gt;&lt;/span&gt; which provides the ability to choose branches, tags or revisons from git repository configured in project.&lt;/span&gt;&lt;span style=&quot;color: #000080;&quot;&gt;(or)&lt;/span&gt;&lt;/li&gt;&#xd;
+&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;color: #000080;&quot;&gt;Use a choice parameter to define the available branches in the configured repository. Use this parameter to specify the branch to build. &lt;span style=&quot;color: #000080;&quot;&gt;&lt;em&gt;{variablename}&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xd;
+&lt;/ul&gt;&#xd;
+&lt;/li&gt;&#xd;
+&lt;/ul&gt;&#xd;
+&lt;h4&gt;&lt;span style=&quot;color: #000080;&quot;&gt;2. Stage 2&lt;/span&gt;&lt;/h4&gt;&#xd;
+&lt;ul&gt;&#xd;
+&lt;li&gt;Step 2a !@#$%^&amp;amp;*(){}[]:&quot;;&apos;&amp;lt;&amp;gt;?,./~`&lt;/li&gt;&#xd;
+&lt;li&gt;Step 2b&lt;/li&gt;&#xd;
+&lt;/ul&gt;&#xd;
+&lt;h4&gt;&lt;span style=&quot;color: #000080;&quot;&gt;3. Stage 3&lt;/span&gt;&lt;/h4&gt;&#xd;
+&lt;ul&gt;&#xd;
+&lt;li&gt;Step 3a&lt;/li&gt;&#xd;
+&lt;/ul&gt;&#xd;
+&lt;h4&gt;&lt;span style=&quot;color: #000080;&quot;&gt;4. Stage 4&lt;/span&gt;&lt;/h4&gt;&#xd;
+&lt;ul&gt;&#xd;
+&lt;li&gt;Step 3a&lt;/li&gt;&#xd;
+&lt;/ul&gt;&#xd;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <net.uaznia.lukanus.hudson.plugins.gitparameter.GitParameterDefinition plugin="git-parameter@0.9.12">
+          <name>BRANCH</name>
+          <description>Branch the build needs to be triggered on</description>
+          <uuid>f2e94ed3-b450-4d92-8b19-dc885f1757a9</uuid>
+          <type>PT_BRANCH</type>
+          <branch></branch>
+          <tagFilter>*</tagFilter>
+          <branchFilter>.*</branchFilter>
+          <sortMode>NONE</sortMode>
+          <defaultValue>origin/master</defaultValue>
+          <selectedValue>NONE</selectedValue>
+          <quickFilterEnabled>false</quickFilterEnabled>
+          <listSize>5</listSize>
+        </net.uaznia.lukanus.hudson.plugins.gitparameter.GitParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.2.2">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/venkateshyadavali/spring-petclinic.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>${branch}</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <assignedNode>maven</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>mvn clean install</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
